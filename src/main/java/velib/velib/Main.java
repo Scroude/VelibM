@@ -16,6 +16,13 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import velib.velib.bd.JDBC;
 /**
  * @author Théo ROLLIN
@@ -40,8 +47,18 @@ public class Main extends Application {
     }
     
     @Override
-    public void start(Stage fenetre) throws IOException {
+    public void start(Stage fenetre) throws IOException, InterruptedException {
         //Runtime.getRuntime().exec("curl -o " + nomSession + "\\Documents\\Velib\\station_status.json https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_status.json" );
+        URL fetchWebsite = new URL("https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_information.json");
+        Path path = Paths.get(fichier1);
+        try (InputStream inputStream = fetchWebsite.openStream()) {
+            Files.copy(inputStream, path, StandardCopyOption.REPLACE_EXISTING);
+        }
+        fetchWebsite = new URL("https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_status.json");
+        path = Paths.get(fichier2);
+        try (InputStream inputStream = fetchWebsite.openStream()) {
+            Files.copy(inputStream, path, StandardCopyOption.REPLACE_EXISTING);
+        }
         //Runtime.getRuntime().exec("curl -o " + nomSession + "\\Documents\\Velib\\station_information.json https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_information.json" );
         this.fenetre = fenetre;
         fenetre.setTitle("Projet Velib"); // titre de la fenêtre
