@@ -17,9 +17,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import velib.velib.Lecture;
-import velib.velib.Main;
-import velib.velib.Station;
 import velib.velib.bd.JDBC;
 
 /**

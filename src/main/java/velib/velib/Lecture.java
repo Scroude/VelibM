@@ -14,7 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import javafx.collections.ObservableList;
-import velib.velib.Station;
 
 
 public class Lecture {
