@@ -224,7 +224,7 @@ public class StationFXML {
             //System.out.println("carte changée");
             String Lat = station.getLatStation();
             String Lon = station.getLonStation();
-            File file = new File(main.nomSession + "\\Documents\\GitHub\\Velib\\src\\velib\\carte.html?lat="+Lat+"&lon="+Lon);
+            File file = new File(main.nomSession + "\\OneDrive\\Documents\\Velib\\carte.html?lat="+Lat+"&lon="+Lon);
             URL url = file.toURI().toURL();
             //System.out.println(URLDecoder.decode(url.toString(), "UTF-8"));
             engine.load(URLDecoder.decode(url.toString(), "UTF-8"));

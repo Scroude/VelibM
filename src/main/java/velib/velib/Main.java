@@ -29,11 +29,10 @@ import velib.velib.bd.JDBC;
  * @version 1.1
  */
 
-
 public class Main extends Application {
     final String nomSession = System.getProperty("user.home");
-    private final String fichier1 = nomSession + "\\Documents\\Velib\\station_information.json";
-    private final String fichier2 = nomSession + "\\Documents\\Velib\\station_status.json";
+    private final String fichier1 = nomSession + "\\OneDrive\\Documents\\Velib\\station_information.json";
+    private final String fichier2 = nomSession + "\\OneDrive\\Documents\\Velib\\station_status.json";
     private final ObservableList<Station> stationData = FXCollections.observableArrayList();
     final ObservableList<Station> stationDataR = FXCollections.observableArrayList();
     private final ArrayList<String> favorisData = new ArrayList<>();

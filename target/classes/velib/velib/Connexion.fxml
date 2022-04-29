@@ -8,23 +8,23 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1055.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="velib.velib.ConnexionFXML">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="velib.velib.ConnexionFXML">
    <children>
-      <Pane layoutX="-3.0" prefHeight="1055.0" prefWidth="1920.0">
+      <Pane layoutX="-1.0" prefHeight="253.6" prefWidth="430.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="nom_utilisateur" layoutX="1053.0" layoutY="417.0" />
-            <PasswordField fx:id="mot_de_passe" layoutX="1055.0" layoutY="482.0" onKeyPressed="#handleButton1ActionConnexionFromFieldPassword" />
-            <Label layoutX="840.0" layoutY="422.0" text="Nom d'utilisateur" />
-            <Label layoutX="855.0" layoutY="487.0" text="Mot de passe" />
-            <Label layoutX="937.0" layoutY="344.0" text="Connexion">
+            <TextField fx:id="nom_utilisateur" layoutX="280.0" layoutY="87.0" />
+            <PasswordField fx:id="mot_de_passe" layoutX="282.0" layoutY="152.0" onKeyPressed="#handleButton1ActionConnexionFromFieldPassword" />
+            <Label layoutX="67.0" layoutY="92.0" text="Nom d'utilisateur" />
+            <Label layoutX="82.0" layoutY="157.0" text="Mot de passe" />
+            <Label layoutX="145.0" layoutY="14.0" text="Connexion">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="connexion" layoutX="787.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleButton1ActionConnexion" text="Connexion" />
-            <Button fx:id="creerUnCompte" layoutX="948.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleButton1ActionCreerUnCompte" text="Créer un compte" />
-            <Button fx:id="quitter" layoutX="1145.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleButton1ActionQuitter" text="Quitter" />
-            <Label fx:id="erreurConnexion" layoutX="935.0" layoutY="531.0" text="Label" textFill="RED" />
+            <Button fx:id="connexion" layoutX="14.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButton1ActionConnexion" text="Connexion" />
+            <Button fx:id="creerUnCompte" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButton1ActionCreerUnCompte" text="Créer un compte" />
+            <Button fx:id="quitter" layoutX="372.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButton1ActionQuitter" text="Quitter" />
+            <Label fx:id="erreurConnexion" layoutX="162.0" layoutY="201.0" text="Label" textFill="RED" />
          </children>
       </Pane>
    </children>
